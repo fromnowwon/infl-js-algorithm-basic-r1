@@ -1,0 +1,27 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>출력결과</title>
+</head>
+
+<body>
+	<script>
+		function solution(arr) {
+			let answer = [];
+			let hash = new Map();
+
+			for (let i = 0; i < arr.length; i++) {
+				if (!hash.has(arr[i])) {
+					answer.push(arr[i]);
+					hash.set(arr[i], 1);
+				}
+			}
+			return answer;
+		}
+		let str = ["good", "time", "good", "time", "student"];
+		console.log(solution(str));
+	</script>
+</body>
+
+</html>
